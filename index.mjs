@@ -13,8 +13,8 @@ function wrongAnswer() {
         let spaceElement = document.querySelector("#game" ).classList.remove("wrong")
     }
 , 1000)
-
-function rightAnswer(){{
+}
+function rightAnswer(){
 
     let spaceElement = document.querySelector("#game" ).classList.add("right")
 
@@ -30,8 +30,8 @@ function rightAnswer(){{
     levelIndicator.textContent = "Level: "+level
     playCom = []
 
-}}
 }
+
 function clickHandler(e){   
     console.log(playing)
     

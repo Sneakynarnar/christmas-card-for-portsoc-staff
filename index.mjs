@@ -6,16 +6,31 @@ let playing = true
 
 
 function wrongAnswer() {
-    for(let i = 1; i <= 9; i++ ) {
-        let spaceElement = document.querySelector("#game" ).classList.add("wrong")
+    let spaceElement = document.querySelector("#game" ).classList.add("wrong")
 
-    }
+ 
     setInterval(() =>{
-    for(let i = 1; i <= 9; i++ ) {
         let spaceElement = document.querySelector("#game" ).classList.remove("wrong")
-
     }
-}, 1000)
+, 1000)
+
+function rightAnswer(){{
+
+    let spaceElement = document.querySelector("#game" ).classList.add("right")
+
+
+    setInterval(() =>{
+        let spaceElement = document.querySelector("#game" ).classList.remove("right")
+    }
+    , 1000)
+    playing=true
+    nextLevel(++level)
+    let levelIndicator = document.querySelector("#score")
+
+    levelIndicator.textContent = "Level: "+level
+    playCom = []
+
+}}
 }
 function clickHandler(e){   
     console.log(playing)
@@ -40,11 +55,7 @@ function clickHandler(e){
             
         }
         if(playCom.toString() === combination.toString()){
-            playing=true
-            nextLevel(++level)
-            let levelIndicator = document.querySelector("#score")
-            levelIndicator.textContent = "Level: "+level
-            playCom = []
+            rightAnswer()
         }
 
     }

@@ -43,3 +43,7 @@ div {
     border-color: red;
     border-width: 0.5em;
 }
+.right {
+    border-color: green;
+    border-width: 0.5em;  
+}
